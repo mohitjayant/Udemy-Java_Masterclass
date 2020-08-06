@@ -7,33 +7,32 @@ public class Node extends ListItem {
     }
 
     @Override
-    protected ListItem next() {
-        return this.right;
+    ListItem next() {
+        return this.rightLink;
     }
 
     @Override
-    protected ListItem setNext(ListItem item) {
-        this.right=item;
-        return this.right;
+    ListItem setNext(ListItem item) {
+        this.rightLink = item;
+        return this.rightLink;
     }
 
     @Override
-    protected ListItem previous() {
-        return this.left;
+    ListItem previous() {
+        return this.leftLink;
     }
 
     @Override
-    protected ListItem setPrevious(ListItem item) {
-        this.left=item;
-        return this.left;
+    ListItem setPrevious(ListItem item) {
+        this.leftLink = item;
+        return this.leftLink;
     }
 
     @Override
-    protected int compareTo(ListItem item) {
-        if (item!=null) {
+    int compareTo(ListItem item) {
+        if(item != null) {
             return ((String) super.getValue()).compareTo((String) item.getValue());
-        }
-        else {
+        } else {
             return -1;
         }
     }
