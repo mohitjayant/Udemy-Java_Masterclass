@@ -56,6 +56,33 @@ public class SelfLinkedList implements NodeList {
 
     @Override
     public boolean removeItem(ListItem item) {
+        if (item!=null) {
+            System.out.println("Deleting Value: "+item.getValue());
+        }
+        ListItem currentItem=this.root;
+        while (currentItem!=null) {
+            int comparision=(currentItem.compareTo(item));
+            if (comparision==0) {
+                //delete this
+                if(currentItem==this.root) {
+                    this.root=currentItem.next();
+                }
+                else {
+                    currentItem.previous().setNext(currentItem.next());
+                    if (currentItem.next()!=null) {
+                        currentItem.next().setPrevious(currentItem.previous());
+                    }
+                }
+                return true;
+            }
+            else if (comparision < 0) {
+                currentItem = currentItem.next();
+            }
+            else {
+                //greater than element to be deleted
+                return false;
+            }
+        }
         return false;
     }
 
