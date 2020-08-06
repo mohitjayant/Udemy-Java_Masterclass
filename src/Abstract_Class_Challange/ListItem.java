@@ -1,8 +1,8 @@
 package Abstract_Class_Challange;
 
 public abstract class ListItem {
-    protected ListItem right=null;
-    protected ListItem left=null;
+    protected ListItem rightLink = null;
+    protected ListItem leftLink = null;
 
     protected Object value;
 
@@ -10,12 +10,12 @@ public abstract class ListItem {
         this.value = value;
     }
 
-    protected abstract ListItem next();
-    protected abstract ListItem setNext(ListItem item);
-    protected abstract ListItem previous();
-    protected abstract ListItem setPrevious(ListItem item);
+    abstract ListItem next();
+    abstract ListItem setNext(ListItem item);
+    abstract ListItem previous();
+    abstract ListItem setPrevious(ListItem item);
 
-    protected abstract int compareTo(ListItem item);
+    abstract int compareTo(ListItem item);
 
     public Object getValue() {
         return value;
