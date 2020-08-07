@@ -14,6 +14,10 @@ public class Location {
         this.exits=new HashMap<String, Integer>();
     }
 
+    public void addExit(String direction,int location){
+        exits.put(direction,location);
+    }
+
     public int getLocationId() {
         return locationId;
     }
@@ -23,6 +27,6 @@ public class Location {
     }
 
     public Map<String, Integer> getExits() {
-        return exits;
+        return new HashMap<String, Integer>(exits);
     }
 }
