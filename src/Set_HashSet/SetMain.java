@@ -28,6 +28,7 @@ public class SetMain {
         String sentence="I am the Arctic Vault contributor at Github. I am active from three years";
         String[] arrayWords=sentence.split(" ");
         words.addAll(Arrays.asList(arrayWords));
+        System.out.println("Words are not in order");
         for (String s:words){
             System.out.println(s);
         }
