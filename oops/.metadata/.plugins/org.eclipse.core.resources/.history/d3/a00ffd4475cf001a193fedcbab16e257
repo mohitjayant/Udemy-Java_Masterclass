@@ -1,0 +1,17 @@
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Dimensions dimensions=new Dimensions(50, 100, 25);
+		Case theCase=new Case("220B", "Dell", "220", dimensions);
+		
+		Monitor theMonitor=new Monitor("27inch Vulture", "acer", 27, new Resolution(2540, 1440));
+		
+		MotherBoard tMotherBoard=new MotherBoard("MJ-220", "Asus", 4, 6, "v2.44");
+		
+		PC thePC=new PC(theCase, tMotherBoard, theMonitor);
+		thePC.getMonitor().drawPixelAt(100, 150, "Red");
+		thePC.getMotherBoard().loadProgram("Windows-10 loading.....");
+		thePC.getTheCase().pressPowerButton();
+	}
+}

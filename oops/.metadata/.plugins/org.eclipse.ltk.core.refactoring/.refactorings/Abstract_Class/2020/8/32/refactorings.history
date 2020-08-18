@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;bird&apos; in &apos;Main.main(...)&apos; to &apos;parrot&apos;&#x0D;&#x0A;- Original project: &apos;Abstract_Class&apos;&#x0D;&#x0A;- Original element: &apos;Main.main(String[]).bird&apos;&#x0D;&#x0A;- Renamed element: &apos;bird&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;bird&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Main.java[Main~main~\[QString;@bird!134!167!142!145!QParrot;!0!false" name="parrot" references="true" stamp="1596433844484" version="1.0"/>
+</session>

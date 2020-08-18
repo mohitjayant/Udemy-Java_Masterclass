@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Hamburger hamburger=new Hamburger("Basic", "Sausage", 3.5, "White");
+		double price=hamburger.itemizeHamburger();
+		hamburger.addHamburgerAddition1("Tomato", 0.35);
+	}
+
+}
